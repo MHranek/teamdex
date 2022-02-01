@@ -18,7 +18,7 @@ As a fan of the Pokemon series, I want a tool for finding and storing the info o
 
 ## Installation
 - To get the app on your local machine:
-  1. Click on the code button on the repo.
+  1. Click on the code button on the [repo](https://github.com/MHranek/teamdex).
   2. Copy the HTTPS or SSH link.
   3. Run the command `git clone` with the copied HTTPS or SSH link.
 - To get the app prepared to run:
@@ -40,7 +40,7 @@ The visual shows the app running on a deployed heroku server.
 ![Team Dex Static Visual](./assets/teamdex-visual.png)
 
 ## Deployed Link
-https://teamdex.herokuapp.com/
+https://intense-eyrie-40065.herokuapp.com/
 
 ## Collaborators
 Michael Hranek - GitHub: [MHranek](https://github.com/MHranek)
