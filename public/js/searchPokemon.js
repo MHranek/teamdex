@@ -5,13 +5,14 @@ const newTeamDisplay = document.getElementById('new-team-display');
 const saveNewTeamBtn = document.getElementById('save-new-team');
 const newTeamName = document.getElementById('new-team-name');
 const selectedGame = document.getElementById('game-list');
+const dataListChoice = document.getElementById('pokemon-choice');
 
 const newTeam = [];
 
 // search PokeAPI for the respective Pokemon
 const searchForPokemon = async function (name) {
-    const newURL = name.slice(0, 33) + name.slice(41);
-    const response = await fetch(newURL);
+    const pokeAPIURL = `https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`;
+    const response = await fetch(pokeAPIURL);
     const pokeData = await response.json();
     return pokeData;
 }
@@ -51,7 +52,7 @@ addPokemonBtn.addEventListener('click', async (event) => {
     if (newTeam.length >= 6) {
         alert('Team at capacity, max 6')
     } else {
-        const pokemonObj = await searchForPokemon(pokeListData.options[pokeListData.selectedIndex].getAttribute('data-url'));
+        const pokemonObj = await searchForPokemon(dataListChoice.value);
         addToTeam(pokemonObj);
     }
 })
